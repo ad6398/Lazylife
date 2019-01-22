@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+<div class="container">
+        <div class="row">
+              <div class="col-md-6">
+                    <div class="thumbnail">
+                                <div class="text-right">
+                                    <h3> Rs. <%= laundry.costpercloth %> /cloth</h3>
+                                </div>
+                                <img class="img-responsive" src=" <%= laundry.image %> " >
+                                <h1><a><%= laundry.name %></a></h1>
+                                <p> <%= laundry.description %> </p>
+                    </div>
+              </div>
+              <div class="col-md-6"> 
+                  <div class="write">
+                                    <h1>Other Info</h1>
+                                    <hr>
+                                    <h2>Location</h2>
+                                    <p><%= laundry.location %></p>
+                                    <h2>Contact No.</h2>
+                                    <p><%= laundry.contact %></p>
+                                    <h2>Average Tym of Washing</h2>
+                                    <p><%= laundry.avgtym %></p>
+                  </div>
+                  <br>
+                  <br>
+              </div>
+              <a class="btn btn-danger btn-lg " href="/laundry/<%= laundry._id %>/confirmrequest">Place Request</a>
+        </div>
+  </div>
+
+
+
+
+
+<% include ../partials/footer %>

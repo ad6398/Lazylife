@@ -1,0 +1,50 @@
+<% include ../partials/header1 %>
+
+
+<div class="container">
+            <div class="row">
+                  <div class="col-md-6">
+                        <div class="thumbnail">
+                                <div class="text-right">
+                                        <h3> Rs. <%= dhobhi.costpercloth %> /cloth</h3>
+                                </div>
+                                <img class="img-responsive" src=" <%= dhobhi.image %> " >
+                                <h1><a><%= dhobhi.name %></a></h1>
+                                <p> <%= dhobhi.description %> </p>
+                        </div>
+                  </div>
+                  <div class="col-md-6"> 
+                      <div class="write">
+                            <h1>Other Info</h1>
+                            <hr>
+                            <h2>Location</h2>
+                            <p><%= dhobhi.location %></p>
+                            <h2>Contact No.</h2>
+                            <p><%= dhobhi.contact %></p>
+                            <h2>Average Tym of Washing</h2>
+                            <p><%= dhobhi.avgtym %></p>
+                      </div>
+                      <br>
+                      <br>
+                  </div>
+                  <div class="col-md-12 "> 
+                        <div>
+                                <h1 class="write">Orders Till Now</h1>
+                                <hr>
+                                <% for(var i=0;i<  dhobhi.recieve.length ;i++){ %>
+                                    <div >
+                                        <strong><h1 class="write">Placed By:- <%= dhobhi.recieve[i].placedby %></h1></strong>
+                                        <p class="write">Contact No:-<%= dhobhi.recieve[i].contact %></p>
+                                        <div class="text-right">
+                                        <p class="write"><%= dhobhi.recieve[i].date %></p>
+                                        </div>
+                                        <hr>
+                                        <hr>
+                                    </div>
+                                <% } %> 
+                        </div>
+                  </div>
+            </div>
+      </div>
+    
+<% include ../partials/footer1 %>
